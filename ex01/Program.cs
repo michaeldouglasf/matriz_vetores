@@ -8,16 +8,20 @@ class Program
         int bedMaxAvg, hourMax, bedMax, maxValue;
         double[] avgPulses;
         double maxAvg, sum;
+        Random random;
 
         pulses = new int[24, 4];
         avgPulses = new double[4];
+        random = new Random();
+        
 
-        Console.WriteLine("Preenchendo as  pulsacoes  \n");
+        Console.WriteLine("Preenchendo as  pulsacoes de forma randomica  \n");
 
         for (int i = 0; i < 24; i++)
         {
             for (int j = 0; j < 4; j++)
             {
+                pulses[i, j] = random.Next(60, 100);
                 Console.WriteLine($"Hora {i} - Cama {j + 1}: {pulses[i, j]}");
             }
         }
