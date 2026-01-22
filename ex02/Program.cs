@@ -79,7 +79,7 @@ class Program
         {
             sumColumn = sumColumn + matrix[i, columnChoice];
         }
-        Console.WriteLine($"Soma dos elementos da coluna; {columnChoice}: {sumColumn}");
+        Console.WriteLine($"Soma dos elementos da coluna: {columnChoice} -> {sumColumn}");
 
         sumDiagonal = 0;
         for (int i = 0; i < 10; i++)
@@ -131,6 +131,7 @@ class Program
             {
                 Console.Write($"{transposed[i, j],4} ");
             }
+            Console.WriteLine();
         }
     }
 }
